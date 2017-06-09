@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <style>
+
+    </style>
+</head>
+<body>
+<!--音乐播放-->
+    <div id="music">
+        <audio autoplay="autoplay" controls="controls" loop="loop" preload="auto">
+            <source src="" />
+            <!--<source src="./7!! - オレンジ.mp3" />-->
+            你的浏览器不支持mp3播放
+        </audio>
+        <span class="btn shang">上一首</span>
+        <span class="btn xia">下一首</span>
+    </div>
+
+<!--头部-->
+<div id="header">
+    <div class="quanbu">
+        <div class="daohang">
+            <div class="banxin">
+                <div class="neirong">
+                    <span><a href="#">首页</a></span>
+                    <span><a href="#">聊天室</a></span>
+                    <div class="user">
+                        <span>
+                            <a href="#">个人中心</a></span>
+                        </span>
+                        <span>
+                            <a class="ycmusic">显示/隐藏音乐播放器</a></span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sousuo">
+            <div class="xd">
+                <input type="text" name="" value="" class="btn">
+                <button type="button"></button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--今日推荐-->
+<div id="tuijian" class="banxin ty">
+    <header>
+        <span class="bj"></span>
+        <p class="zhuti">今日推荐</p>
+    </header>
+    <div class="neirong">
+        <div class="left">
+            <a href="#" class="img">
+                <img src="./image/dm/u=4055345103,1304936034&fm=11&gp=0.jpg" alt="">
+                <div class="hbj"></div>
+            </a>
+            <div class="wenzi">
+                <p class="mz">声之形</p>
+                <p class="bq">
+                    <span>标签:</span><i>青春</i><i>恋爱</i>
+                    <span>年代:</span><i>2017</i>
+                </p>
+                <p class="jj">
+                    <span>简介:</span>
+                    <i>
+                    《声之形》是由日本漫画家大今良时创作的漫画作品，
+                    故事主题是没法用声音交流来传达自己的想法，
+                    故事以男主角石田将也的视角出发，
+                    讲述一位患有听力障碍的女生西宫硝子在学校备受霸凌，
+                    得不到友情和关爱，后来男主良心发现，帮助她找到幸福。
+                    </i>
+                </p>
+            </div>
+        </div>
+        <div class="left">
+            <a href="#" class="img">
+                <img src="./image/dm/u=3675579502,3667344603&fm=23&gp=0.jpg" alt="">
+                <div class="hbj"></div>
+            </a>
+            <div class="wenzi">
+                <p class="mz">寒蝉鸣泣之时</p>
+                <p class="bq">
+                    <span>标签:</span><i>致郁</i>
+                    <span>年代:</span><i>2006</i>
+                </p>
+                <p class="jj">
+                    <span>简介:</span>
+                    <i>故事发生在昭和58年初夏，在远离都市的山中小村·雏见泽。从大都市搬家到这个人口连2千都不到的村落中的前原圭一，以自己开朗擅于言谈的性格很快与学校的同学打成了一片。他最好的朋友是喜欢照顾人的礼奈、首领一样的班长魅音、陷阱高手的沙都子、古手神社的女儿、有着不可思议的气质的梨花……
+                    </i>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<!--连载中-->
+<div id="lianzai" class="banxin ty">
+    <header>
+        <span class="bj"></span>
+        <p class="zhuti">连载中</p>
+        <a href="#" class="gd">更多 > </a>
+    </header>
+    <div class="mokuai">
+        <div class="suoyou">
+            <div class="lb">
+                <div class="dongman">
+                    <a href="#">
+                        <img src="./image/dm/1_1513546561.jpg" alt="">
+                        <div class="ming">路人女主的养成方法</div>
+                    </a>
+                </div>
+                <div class="dongman">
+                    <a href="#">
+                        <img src="./image/dm/1_1545555011.jpg" alt="">
+                        <div class="ming">末日时在做什么？有没有空？可以来拯救吗？</div>
+                    </a>
+                </div>
+                <div class="dongman">
+                    <a href="#">
+                        <img src="./image/dm/1_1609124641.jpg" alt="">
+                        <div class="ming">重启咲良田</div>
+                    </a>
+                </div>
+                <div class="dongman">
+                    <a href="#">
+                        <img src="./image/dm/5ce66f68d54052e3a305524b9b06a76977e974fc.jpg_225x300.jpg" alt="">
+                        <div class="ming">月色真美</div>
+                    </a>
+                </div>
+            </div>
+            <div class="lb">
+                <div class="dongman">
+                    <a href="#">
+                        <img src="./image/dm/1_1650306201.jpg" alt="">
+                        <div class="ming">不正经的魔术讲师与禁忌教典</div>
+                    </a>
+                </div>
+                <div class="dongman">
+                    <a href="#">
+                        <img src="./image/dm/a223b1376633625be1cd214c34d8bf34a1e03770.jpg_225x300.jpg" alt="">
+                        <div class="ming">埃罗芒阿老师</div>
+                    </a>
+                </div>
+                <div class="dongman">
+                    <a href="#">
+                        <img src="./image/dm/dy_937de0260851d7462ebe3bd898461bbe.jpg" alt="">
+                        <div class="ming">全职高手</div>
+                    </a>
+                </div>
+                <div class="dongman">
+                    <a href="#">
+                        <img src="./image/dm/1_1527434431.jpg" alt="">
+                        <div class="ming">Re:CREATORS</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="paihan">
+            <div class="quanbu">
+                <p class="biaoti">排行</p>
+                <div class="nr">
+                    <a href="#"><span class="active">1</span><span>埃罗芒阿老师</span><span><i>8.8</i>分</span></a>
+                </div>
+                <div class="nr">
+                    <a href="#"><span class="active">2</span><span>Re:CREATORS</span><span><i>8.8</i>分</span></a>
+                </div>
+                <div class="nr">
+                    <a href="#"><span class="active">3</span><span>恋爱暴君</span><span><i>8.8</i>分</span></a>
+                </div>
+                <div class="nr">
+                    <a href="#"><span>4</span><span>博人传 火影忍者新时代</span><span><i>8.8</i>分</span></a>
+                </div>
+                <div class="nr">
+                    <a href="#"><span>5</span><span>时钟机关之星</span><span><i>8.8</i>分</span></a>
+                </div>
+                <div class="nr">
+                    <a href="#"><span>6</span><span>月色真美</span><span><i>8.8</i>分</span></a>
+                </div>
+                <div class="nr">
+                    <a href="#"><span>7</span><span>夏目友人帐 陆</span><span><i>8.8</i>分</span></a>
+                </div>
+                <div class="nr">
+                    <a href="#"><span>8</span><span>从零开始的魔法书</span><span><i>8.8</i>分</span></a>
+                </div>
+                <div class="nr">
+                    <a href="#"><span>9</span><span>小林家的龙女仆</span><span><i>8.8</i>分</span></a>
+                </div>
+                <div class="nr">
+                    <a href="#"><span>10</span><span>雏子的笔记</span><span><i>8.8</i>分</span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--完结-->
+<div id="wanjie" class="banxin ty">
+    <header>
+        <span class="bj"></span>
+        <p class="zhuti">已完结</p>
+        <a href="#" class="gd">更多 > </a>
+    </header>
+    <div class="mokuai">
+        <div class="suoyou">
+            <div class="lb">
+                <div class="dongman">
+                    <a href="#">
+                        <img src="./image/dm/1_1709324341.jpg" alt="">
+                        <div class="ming">orange橙色奇迹</div>
+                    </a>
+                </div>
+                <div class="dongman">
+                    <a href="#">
+                        <img src="./image/dm/11036.jpg" alt="">
+                        <div class="ming">四月是你的谎言</div>
+                    </a>
+                </div>
+                <div class="dongman">
+                    <a href="#">
+                        <img src="./image/dm/54003a09e72f0daf2ac4bc69f5e4b08e4d016667.jpg_225x300.jpg" alt="">
+                        <div class="ming">Clannad</div>
+                    </a>
+                </div>
+                <div class="dongman">
+                    <a href="#">
+                        <img src="./image/dm/u=2925547681,247716427&fm=23&gp=0.jpg" alt="">
+                        <div class="ming">我们仍未知道那天所看见的花的名字。</div>
+                    </a>
+                </div>
+            </div>
+            <div class="lb">
+                <div class="dongman">
+                    <a href="#">
+                        <img src="./image/dm/f58ea113bb3b2eb95435abf95c4f8507dad07404.jpg_225x300.jpg" alt="">
+                        <div class="ming">命运石之门</div>
+                    </a>
+                </div>
+                <div class="dongman">
+                    <a href="#">
+                        <img src="./image/dm/0406cd1398ad8ae0e9623bed5544d6002d8d30be.jpg_225x300.jpg" alt="">
+                        <div class="ming">我的青春恋爱物语果然有问题。</div>
+                    </a>
+                </div>
+                <div class="dongman">
+                    <a href="#">
+                        <img src="./image/dm/1_1640425821.jpg" alt="">
+                        <div class="ming">为美好的世界献上祝福</div>
+                    </a>
+                </div>
+                <div class="dongman">
+                    <a href="#">
+                        <img src="./image/dm/u=1468129661,432235722&fm=23&gp=0.jpg" alt="">
+                        <div class="ming">空之境界</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="paihan">
+            <div class="quanbu">
+                <p class="biaoti">排行</p>
+                <div class="nr">
+                    <a href="#"><span class="active">1</span><span>Re：从零开始的异世界生活</span><span><i>8.8</i>分</span></a>
+                </div>
+                <div class="nr">
+                    <a href="#"><span class="active">2</span><span>在下坂本，有何贵干？</span><span><i>8.8</i>分</span></a>
+                </div>
+                <div class="nr">
+                    <a href="#"><span class="active">3</span><span>夏目友人帐 伍</span><span><i>8.8</i>分</span></a>
+                </div>
+                <div class="nr">
+                    <a href="#"><span>4</span><span>Fate/stay night</span><span><i>8.8</i>分</span></a>
+                </div>
+                <div class="nr">
+                    <a href="#"><span>5</span><span>线上游戏的老婆不可能是女生？</span><span><i>8.8</i>分</span></a>
+                </div>
+                <div class="nr">
+                    <a href="#"><span>6</span><span>四月是你的谎言</span><span><i>8.8</i>分</span></a>
+                </div>
+                <div class="nr">
+                    <a href="#"><span>7</span><span>我们仍未知道那天所看见的花的名字。</span><span><i>8.8</i>分</span></a>
+                </div>
+                <div class="nr">
+                    <a href="#"><span>8</span><span>野良神 ARAGOTO</span><span><i>8.8</i>分</span></a>
+                </div>
+                <div class="nr">
+                    <a href="#"><span>9</span><span>清恋 SEIREN</span><span><i>8.8</i>分</span></a>
+                </div>
+                <div class="nr">
+                    <a href="#"><span>10</span><span>命运石之门</span><span><i>8.8</i>分</span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--电影剧场版-->
+<div id="juchang" class="banxin ty">
+    <header>
+        <span class="bj"></span>
+        <p class="zhuti">电影剧场版</p>
+        <a href="#" class="gd">更多 > </a>
+    </header>
+    <div class="mokuai">
+        <div class="suoyou">
+            <div class="lb">
+                <div class="dongman">
+                    <a href="#">
+                        <img src="./image/dm/u=3013316027,3900106237&fm=23&gp=0.jpg" alt="">
+                        <div class="ming">你的名字</div>
+                    </a>
+                </div>
+                <div class="dongman">
+                    <a href="#">
+                        <img src="./image/dm/u=3123738179,3538195507&fm=23&gp=0.jpg" alt="">
+                        <div class="ming">言叶之庭</div>
+                    </a>
+                </div>
+                <div class="dongman">
+                    <a href="#">
+                        <img src="./image/dm/1eaf4c554ba073db011da2d80b5abda7960321e1.jpg_225x300.jpg" alt="">
+                        <div class="ming">从很久以前就喜欢你了。～告白实行委员会～</div>
+                    </a>
+                </div>
+                <div class="dongman">
+                    <a href="#">
+                        <img src="./image/dm/u=2107049165,311129364&fm=23&gp=0.jpg" alt="">
+                        <div class="ming">玉子爱情故事</div>
+                    </a>
+                </div>
+            </div>
+            <div class="lb">
+                <div class="dongman">
+                    <a href="#">
+                        <img src="./image/dm/1_1042015221.jpg" alt="">
+                        <div class="ming">心灵想要大声呼喊</div>
+                    </a>
+                </div>
+                <div class="dongman">
+                    <a href="#">
+                        <img src="./image/dm/u=1429030707,3863550269&fm=23&gp=0.jpg" alt="">
+                        <div class="ming">千与千寻</div>
+                    </a>
+                </div>
+                <div class="dongman">
+                    <a href="#">
+                        <img src="./image/dm/1-16021H151290-L.jpg" alt="">
+                        <div class="ming">命运石之门：负荷领域的既视</div>
+                    </a>
+                </div>
+                <div class="dongman">
+                    <a href="#">
+                        <img src="./image/dm/u=2842086019,3912233995&fm=23&gp=0.jpg" alt="">
+                        <div class="ming">凉宫春日的消失</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="paihan">
+            <div class="quanbu">
+                <p class="biaoti">排行</p>
+                <div class="nr">
+                    <a href="#"><span class="active">1</span><span>千与千寻</span><span><i>8.8</i>分</span></a>
+                </div>
+                <div class="nr">
+                    <a href="#"><span class="active">2</span><span>你的名字</span><span><i>8.8</i>分</span></a>
+                </div>
+                <div class="nr">
+                    <a href="#"><span class="active">3</span><span>哈尔的移动城堡</span><span><i>8.8</i>分</span></a>
+                </div>
+                <div class="nr">
+                    <a href="#"><span>4</span><span>秒速五厘米</span><span><i>8.8</i>分</span></a>
+                </div>
+                <div class="nr">
+                    <a href="#"><span>5</span><span>声之形</span><span><i>8.8</i>分</span></a>
+                </div>
+                <div class="nr">
+                    <a href="#"><span>6</span><span>龙猫</span><span><i>8.8</i>分</span></a>
+                </div>
+                <div class="nr">
+                    <a href="#"><span>7</span><span>幽灵公主</span><span><i>8.8</i>分</span></a>
+                </div>
+                <div class="nr">
+                    <a href="#"><span>8</span><span>起风了</span><span><i>8.8</i>分</span></a>
+                </div>
+                <div class="nr">
+                    <a href="#"><span>9</span><span>猫的报恩</span><span><i>8.8</i>分</span></a>
+                </div>
+                <div class="nr">
+                    <a href="#"><span>10</span><span>中二病也要谈恋爱剧场版-Take On Me-</span><span><i>8.8</i>分</span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--底部-->
+<footer>
+    <div class="banxin">
+        <div class="neirong">
+            <div class="bili">
+                <p>bilibili</p>
+                <div class="lb">
+                    <div>
+                        <a href="#">关于我们</a>
+                    </div>
+                    <div>
+                        <a href="#">友情链接</a>
+                    </div>
+                    <div>
+                        <a href="#">哔哩哔哩周边</a>
+                    </div>
+                </div>
+                <div class="lb">
+                    <div>
+                        <a href="#">联系我们</a>
+                    </div>
+                    <div>
+                        <a href="#">加入我们</a>
+                    </div>
+                    <div>
+                        <a href="#">官方认证</a>
+                    </div>
+                </div>
+            </div>
+            <div class="bili">
+                <p>传送门</p>
+                <div class="lb">
+                    <div>
+                        <a href="#">帮助中心</a>
+                    </div>
+                    <div>
+                        <a href="#">高级弹幕</a>
+                    </div>
+                    <div>
+                        <a href="#">活动专题页</a>
+                    </div>
+                </div>
+                <div class="lb">
+                    <div>
+                        <a href="#">侵权申诉</a>
+                    </div>
+                    <div>
+                        <a href="#">分院帽计划</a>
+                    </div>
+                    <div>
+                        <a href="#">活动中心</a>
+                    </div>
+                </div>
+                <div class="lb">
+                    <div>
+                        <a href="#">用户反馈论坛</a>
+                    </div>
+                    <div>
+                        <a href="#">壁纸站</a>
+                    </div>
+                    <div>
+                        <a href="#">名人堂</a>
+                    </div>
+                </div>
+            </div>
+            <div class="bili">
+                <div class="lb">
+                    <div class="phone">
+                        <div class="img"></div>
+                        <a>手机端下载</a>
+                    </div>
+                    <div class="wb">
+                        <div class="img"></div>
+                        <a>新浪微博</a>
+                    </div>
+                    <div class="wx">
+                        <div class="img"></div>
+                        <a>官方微信</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p><img src="./image/hy_83x30.png" alt="">2017  本站不提供任何视听上传服务，所有内容均来自视频分享站点所提供的公开引用资源</p>
+    </div>
+</footer>
+<script src="./js/index.js"></script>
+</body>
+</html>
