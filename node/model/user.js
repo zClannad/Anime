@@ -8,9 +8,15 @@ const userSchema = new mongoose.Schema({
   email:String
 })
 
+// 用户登录，用用户名找密码
 userSchema.statics.login = function(user,cb){
   this.model('user').findOne({user:user},'pass',cb)
 }
+
+userSchema.statics.queryUser = function(user,cb){
+  this.model('user').findOne({user:user},cb)
+}
+
 
 const user = db.model('user',userSchema)
 

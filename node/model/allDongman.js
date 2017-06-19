@@ -5,7 +5,7 @@ var db = require("./db")
 
 var allDongmanSchema = new mongoose.Schema({
   // 动漫名
-  name: { type: String, index: true,unique: true},
+  name: { type: String, index: true, unique: true },
   // 类别
   leibie: String,
   // 图片名
@@ -21,31 +21,53 @@ var allDongmanSchema = new mongoose.Schema({
   // 是否显示在首页
   show: { type: Boolean, default: true },
   // 创建时间
-  createTime: { type: Date, default: Date.now }
+  createTime: { type: Date, default: Date.now },
+  // 评论
+  comment: [{
+    user: String,
+    content: String,
+    time: { type: Date, default: Date.now }
+  }]
 }, { collection: 'alldongman' })
 
 // 根据页码获得动漫数据
-allDongmanSchema.statics.queryPage = function(page,callback){
+allDongmanSchema.statics.queryPage = function (page, callback) {
   //过滤的条数
-  var filter = (page-1)*8;
-  return this.model('allDongman').find({},callback).sort({'createTime':-1}).skip(filter).limit(8);
+  var filter = (page - 1) * 8;
+  return this.model('allDongman').find({}, callback).sort({ 'createTime': -1 }).skip(filter).limit(8);
 }
 
 //获得动漫的总条数
-allDongmanSchema.statics.getcount = function(callback){
-  return this.model("allDongman").count({},callback)
+allDongmanSchema.statics.getcount = function (callback) {
+  return this.model("allDongman").count({}, callback)
 }
 
-// 根据条件件修改数据
-allDongmanSchema.statics.updmdate = function(tiaojian,shuju,callback){
-  return this.model("allDongman").update(tiaojian,{$set:shuju},{} , callback)
+// 根据条件修改数据
+allDongmanSchema.statics.updmdate = function (tiaojian, shuju, callback) {
+  return this.model("allDongman").update(tiaojian, { $set: shuju }, {}, callback)
 }
 
 // 根据id删除数据
-allDongmanSchema.statics.deletedm = function(id,callback){
-  return this.model("allDongman").remove({_id:id},callback)
+allDongmanSchema.statics.deletedm = function (id, callback) {
+  return this.model("allDongman").remove({ _id: id }, callback)
 }
 
+// 查询数据（条件，查什么，查询个数，第几页，排序）
+allDongmanSchema.statics.queryData = function (tiaojian, chashenme, num, page, paixu, callback) {
+  //过滤的条数
+  var filter = (page - 1) * num;
+  return this.model('allDongman').find(tiaojian, chashenme, callback).sort(paixu).skip(filter).limit(num);
+  // return this.model('allDongman').find(tiaojian, callback).
+  // select(chashenme).sort({ paixu: -1 }).skip(filter).limit(num);
+}
+// 添加评论
+allDongmanSchema.statics.tjComment = function(name,obj,cb){
+  return this.model('allDongman').update(name,{
+    $push:{
+      comment:obj
+    }
+  },cb)
+}
 // 集合绑定结构
 var allDongman = db.model("allDongman", allDongmanSchema)
 // allDongman.create({

@@ -7,7 +7,8 @@
         <!--<h5>{{value}}----{{key}}-----{{index}}</h5>-->
         <!--<h5>{{value.biaoqian}}</h5>-->
         <a href="#" class="img">
-          <img :src="value.img" alt="">
+          <img :src="'@/../static/image/uploads/'+value.img" alt="">
+          <!--<img :src="value.img" alt="">-->
           <div class="hbj"></div>
         </a>
         <div class="wenzi">

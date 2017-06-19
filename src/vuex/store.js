@@ -5,7 +5,7 @@ Vue.use(Vuex)
 
 const state = {
   user:'',
-  isHomeUser:''
+  homeUser:''
 }
 
 const mutations = {

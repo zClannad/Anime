@@ -15,7 +15,7 @@
           </div>
         </template>
       </el-table-column>
-      <el-table-column label="类别" width="80">
+      <el-table-column label="类别" width="90">
         <template scope="scope">
           <div slot="reference" class="name-wrapper">
             <span>{{ scope.row.leibie }}</span>
@@ -52,7 +52,7 @@
           </div>
         </template>
       </el-table-column>
-      <el-table-column label="简介" width="200">
+      <el-table-column label="简介" width="300">
         <template scope="scope">
           <div slot="reference" class="name-wrapper">
             <span>{{ scope.row.jianjie }}</span>

@@ -14,7 +14,7 @@
     </el-form-item>
 
     <el-form-item label="标签" prop="biaoqian">
-      <el-checkbox-group v-model="ruleForm.biaoqian">
+      <el-checkbox-group v-model="ruleForm.biaoqian" style="width:60%">
         <el-checkbox :label="v" name="type" v-for="v in biaoqian" :key="v.id"></el-checkbox>
       </el-checkbox-group>
     </el-form-item>
@@ -84,7 +84,8 @@ export default {
         2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014,
         2015, 2016, 2017],
       biaoqian: ["青春", "搞笑", "推理", "热血", "后宫", "科幻",
-        "泡面番", "恐怖", "轻改", "催泪", "魔法", "日常"],
+        "泡面番", "恐怖", "轻改", "催泪", "魔法", "日常","恋爱",
+        "致郁","校园"]
 
     };
   },

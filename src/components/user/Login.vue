@@ -16,7 +16,7 @@
 
         <el-form-item>
           <el-button type="primary" @click="submitForm('ruleForm')" size='large'>提交</el-button>
-          <router-link to='/'><el-button size='large'>注册</el-button></router-link>
+          <router-link to='/user/register'><el-button size='large'>注册</el-button></router-link>
         </el-form-item>
 
       </el-form>
@@ -73,7 +73,7 @@ export default {
         if (valid) {
           // console.log(that.ruleForm)
           // 登录请求
-          axios.post('http://127.0.0.1:3000/userlogin', {
+          axios.post('http://192.168.191.1:3000/userlogin', {
             user: that.ruleForm.user,
             pass: that.ruleForm.pass
           })
@@ -84,7 +84,7 @@ export default {
                 alert("登录失败")
                 return
               }
-              // 调用vuex中的isLogin方法
+              // 调用vuex中的isHomeLogin方法
               that.$store.commit('isHomeLogin', res.data);
               that.$router.push('/')
               that.ruleForm.user = ''

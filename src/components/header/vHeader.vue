@@ -10,17 +10,15 @@
                 <router-link to='/'>首页</router-link>
               </span>
               <span>
-                <a href="#">聊天室</a>
+                <router-link to="/chatRoom">聊天室</router-link>
               </span>
               <div class="user">
-                <p class="huanyin" v-if="homeUser">
+                <p class="huanyin" v-if="homeUser" @mouseover="showtuichu" @mouseout="nshowtuichu">
                   <span>您好，{{homeUser}}</span>
+                  <span id="tuichu" @click="tuichu">退出登录</span>
                 </p>
                 <span v-else class="login">
                   <router-link to='/user'>登录</router-link>
-                </span>
-                <span>
-                  <a class="ycmusic">显示/隐藏音乐播放器</a>
                 </span>
                 <span>
                   <router-link to='/admin/login'>进入后台管理系统</router-link>
@@ -49,6 +47,20 @@ export default {
     homeUser() {
       return this.$store.state.homeUser
     }
+  },
+  methods: {
+    showtuichu() {
+      let tuichu = document.querySelector('#tuichu')
+      tuichu.style.display = 'inline-block'
+    },
+    nshowtuichu(){
+      let tuichu = document.querySelector('#tuichu')
+      tuichu.style.display = 'none'
+    },
+    tuichu(){
+      localStorage.homeUser=''
+      this.$store.state.homeUser = ''
+    }
   }
 }
 </script>
@@ -64,8 +76,22 @@ export default {
   /*background-color: rgba(0, 0, 0, 0);*/
 }
 
+.huanyin #tuichu {
+  padding-top: 15px;
+  position: absolute;
+  cursor: pointer;
+  display: none;
+  color: #000;
+  background-color: rgba(255, 255, 255, .5);
+}
 .huanyin span:hover {
   background-color: rgba(0, 0, 0, 0)!important;
+}
+
+.btn {
+  background-color: rgba(255, 255, 255, 0.7);
+  color: #000;
+  font-size: 14px;
 }
 </style>
 

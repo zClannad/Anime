@@ -11,9 +11,12 @@
       <div class="suoyou">
         <div class="lb" v-for="zu in listdongman">
           <div class="dongman" v-for="value in zu">
-            <a href="#">
-              <img :src="value.img" alt="">
+            <router-link :to="'/aname/'+value.name">
+              <img :src="'@/../static/image/uploads/'+value.imgname" alt="">
               <div class="ming">{{value.name}}</div>
+            </router-link>
+            <a href="#">
+
             </a>
           </div>
         </div>
@@ -22,13 +25,13 @@
         <div class="quanbu">
           <p class="biaoti">排行</p>
           <div class="nr" v-for="(v,k) in mokuai.dongman.paihan">
-            <a href="#">
+            <router-link :to="'/aname/'+v.name">
               <span class="active" v-if="k<=2">{{k+1}}</span>
               <span v-else>{{k+1}}</span>
               <span>{{v.name}}</span>
               <span>
                 <i>{{v.pingfen}}</i>分</span>
-            </a>
+            </router-link>
           </div>
         </div>
       </div>

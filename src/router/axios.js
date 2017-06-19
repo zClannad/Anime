@@ -21,7 +21,7 @@ axios.interceptors.request.use(
 // response 拦截器
 axios.interceptors.response.use(
   response => {
-    console.log(response+'这是拦截器返回的信息')
+    // console.log(response+'这是拦截器返回的信息')
     return response;
   },
   error => {

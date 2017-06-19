@@ -1,7 +1,10 @@
 var express = require("express")
 var app = express()
-var session = require("express-session")
+// var session = require("express-session")
 var router = require("./router/router")
+
+var http = require('http').Server(app)
+var io = require('socket.io')(http)
 
 // 设置允许跨域
 app.all('*', function (req, res, next) {
@@ -17,13 +20,13 @@ app.all('*', function (req, res, next) {
 });
 
 // app.set('trust proxy', 1) // trust first proxy
-app.use(session({
-  secret: 'keyboard cat',
-  resave: false,
-  saveUninitialized: true
+// app.use(session({
+//   secret: 'keyboard cat',
+//   resave: false,
+//   saveUninitialized: true
   // 好像好https
   // cookie: { secure: true }
-}))
+// }))
 
 //添加数据
 app.get("/add", router.add)
@@ -41,5 +44,26 @@ app.get("/delete",router.deletedm)
 app.post("/adminlogin",router.adminLogin)
 // 用户登录
 app.post("/userlogin",router.userlogin)
+// 用户注册
+app.post("/userregister",router.userregister)
+// 获得两条今日推荐
+app.get("/shouye",router.shouye)
+// 获得一条数据的全部信息
+app.get("/details",router.details)
+// 评论
+app.get('/comment',router.comment)
 
-app.listen(3000)
+io.on('connection', function(socket){
+    //接收
+  socket.on('chat', function(msg){
+    // console.log('message: ' + msg);
+    // 发给所有人
+    io.emit('chat', msg);
+    // 谁发给服务就发给谁
+    // socket.emit('chat', msg);
+    //发给除了发给服务器的其他全部人
+    // socket.broadcast.emit('chat', msg);
+  });
+});
+
+http.listen(3000)

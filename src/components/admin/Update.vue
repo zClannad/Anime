@@ -41,7 +41,7 @@
       <el-button type="primary" @click="submitForm('ruleForm')">保存</el-button>
       <el-button @click="resetForm('ruleForm')">重置</el-button>
     </el-form-item>
-  <h1>哈哈{{$route.params.updata}}</h1>
+
   </el-form>
 </template>
 

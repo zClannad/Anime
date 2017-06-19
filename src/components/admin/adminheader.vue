@@ -8,9 +8,7 @@
         <el-menu-item index="/">删除</el-menu-item>
       </el-submenu>
       <el-menu-item index="/admin/add">添加数据</el-menu-item>
-      <el-menu-item index="/">
-        <a href="">订单管理</a>
-      </el-menu-item>
+      <el-menu-item index="/">回到首页</el-menu-item>
       <el-menu-item index="3" @click='loginOut'>退出登录</el-menu-item>
     </el-menu>
     <router-view></router-view>
