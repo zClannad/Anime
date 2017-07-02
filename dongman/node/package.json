@@ -1,0 +1,12 @@
+{
+  "dependencies": {
+    "express": "^4.15.3",
+    "express-session": "^1.15.3",
+    "formidable": "^1.1.1",
+    "mongoose": "^4.10.4",
+    "socket.io": "^2.0.3"
+  },
+  "devDependencies": {
+    "express-session": "^1.15.3"
+  }
+}

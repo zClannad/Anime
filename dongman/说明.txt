@@ -1,0 +1,10 @@
+直接打开会出问题，因为我使用了nodejs和mongodb数据库,如果要打开：
+1、安装mongodb数据库，并开启
+2、安装nodejs环境
+3、安装依赖包
+  在根目录下执行命令：npm install
+  在node目录下执行命令：npm install
+4、启动服务：
+  在node目录下执行命令：node app.js
+  在根目录下执行命令：npm run dev
+然后就可以访问了：http://localhost:8080/

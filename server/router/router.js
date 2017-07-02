@@ -1,11 +1,11 @@
 
-var formidable = require("formidable")
-var allDongman = require("../model/allDongman")
-var administrator = require("../model/administrator")
-var user = require('../model/user')
-var fs = require("fs")
-var path = require("path")
-var md5 = require("../model/md5")
+const formidable = require("formidable")
+const allDongman = require("../model/allDongman")
+const administrator = require("../model/administrator")
+const user = require('../model/user')
+const fs = require("fs")
+const path = require("path")
+const md5 = require("../model/md5")
 
 // 添加数据
 exports.add = function (req, res, next) {
@@ -134,6 +134,8 @@ exports.queryPage = (req, res, next) => {
 exports.update = (req, res, next) => {
   // console.log(req.query)
   chuli(req, res)
+  console.log(req.query)
+  delete req.query.comment
   allDongman.updmdate({ _id: req.query._id }, req.query, function (err, result) {
     if (err) {
       console.log(err)
