@@ -73,7 +73,7 @@ export default {
         if (valid) {
           // console.log(that.ruleForm)
           // 登录请求
-          axios.post('http://192.168.191.1:3000/userlogin', {
+          axios.post('http://127.0.0.1:3000/userlogin', {
             user: that.ruleForm.user,
             pass: that.ruleForm.pass
           })
