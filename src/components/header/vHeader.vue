@@ -7,7 +7,7 @@
           <div class="banxin">
             <div class="neirong">
               <span>
-                <router-link to='/'>首页</router-link>
+                <router-link to='/'><i class="iconfont icon-zhuye"></i>首页</router-link>
               </span>
               <span>
                 <router-link to="/chatRoom">聊天室</router-link>
@@ -25,6 +25,9 @@
                 </span>
               </div>
             </div>
+            <div class="logo">
+          <img src="@/../static/image/logo2.png" alt="" srcset="">
+        </div>
           </div>
         </div>
 
@@ -92,6 +95,11 @@ export default {
   background-color: rgba(255, 255, 255, 0.7);
   color: #000;
   font-size: 14px;
+}
+.logo {
+  position: relative;
+  top: 10px;
+  left: 70px;
 }
 </style>
 
