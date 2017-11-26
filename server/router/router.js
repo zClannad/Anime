@@ -227,7 +227,7 @@ exports.userregister = (req, res, next) => {
     console.log(fields)
     // res.send('哈哈')
     fields.user = fields.user.trim()
-    fields.pass = fields.user.trim()
+    fields.pass = fields.pass.trim()
     fields.email = fields.email.trim()
     user.queryUser(fields.user, (err, result) => {
       if (err) {
@@ -237,6 +237,8 @@ exports.userregister = (req, res, next) => {
       if (result) {
         res.send('2')
       } else {
+    console.log(fields)
+
         user.create({
           user: fields.user,
           pass: md5(fields.pass),

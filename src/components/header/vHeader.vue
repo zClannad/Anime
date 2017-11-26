@@ -13,9 +13,9 @@
                 <router-link to="/chatRoom">聊天室</router-link>
               </span>
               <div class="user">
-                <p class="huanyin" v-if="homeUser" @mouseover="showtuichu" @mouseout="nshowtuichu">
+                <p class="huanyin" v-if="homeUser" >
                   <span>您好，{{homeUser}}</span>
-                  <span id="tuichu" @click="tuichu">退出登录</span>
+                  <span id="tuichu" @click="tuichu">注销</span>
                 </p>
                 <span v-else class="login">
                   <router-link to='/user'>登录</router-link>
@@ -52,14 +52,6 @@ export default {
     }
   },
   methods: {
-    showtuichu() {
-      let tuichu = document.querySelector('#tuichu')
-      tuichu.style.display = 'inline-block'
-    },
-    nshowtuichu(){
-      let tuichu = document.querySelector('#tuichu')
-      tuichu.style.display = 'none'
-    },
     tuichu(){
       localStorage.homeUser=''
       this.$store.state.homeUser = ''
@@ -81,11 +73,11 @@ export default {
 
 .huanyin #tuichu {
   padding-top: 15px;
-  position: absolute;
+  /* position: absolute; */
   cursor: pointer;
-  display: none;
-  color: #000;
-  background-color: rgba(255, 255, 255, .5);
+  /* display: none; */
+  color: #f25d11;
+  /* background-color: rgba(255, 255, 255, .5); */
 }
 .huanyin span:hover {
   background-color: rgba(0, 0, 0, 0)!important;
@@ -98,8 +90,8 @@ export default {
 }
 .logo {
   position: relative;
-  top: 10px;
-  left: 70px;
+  top: 30px;
+  left: 105px;
 }
 </style>
 

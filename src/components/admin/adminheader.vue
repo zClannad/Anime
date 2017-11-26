@@ -9,6 +9,7 @@
       </el-submenu>-->
       <el-menu-item index="/admin/showAll">查看所有动漫</el-menu-item>
       <el-menu-item index="/admin/add">添加数据</el-menu-item>
+      <el-menu-item  @click='pinglun'>动漫评论管理</el-menu-item>
       <el-menu-item index="/">回到首页</el-menu-item>
       <el-menu-item index="3" @click='loginOut'>退出登录</el-menu-item>
     </el-menu>
@@ -27,6 +28,10 @@ export default {
       localStorage.user=''
       this.$store.state.user = ''
       this.$router.push('/admin/login')
+    },
+    pinglun(){
+      // alert(1)
+      // return false
     }
   }
 }
